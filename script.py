@@ -1,3 +1,13 @@
+import requests
+from bs4 import BeautifulSoup
+import os
+import csv
+
+# Create a folder to store downloaded images if it doesn't exist
+if not os.path.exists('Video'):
+    os.makedirs('video')
+
+# CSV file to store data
 csv_filename = 'video_data.csv'
 # Create a CSV file and write the header row
 fieldnames = ['Video URL','Video Title','Video Description']
